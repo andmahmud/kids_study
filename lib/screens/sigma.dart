@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import '../models/favorites_model.dart';
 
-class CaptionsScreen extends StatelessWidget {
+class sigma extends StatelessWidget {
   final List<String> sigmaCaptions = [
     "Stay strong, even when you feel weak. দুর্বল অনুভব করলেও শক্ত থাকো।",
     "The world is yours to conquer.বিশ্ব তোমার জয় করার জন্য।",

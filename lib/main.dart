@@ -1,7 +1,8 @@
+import 'package:caption/screens/funnyCaptionsScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'screens/home_screen.dart';
-import 'screens/captions_screen.dart';
+import 'screens/sigma.dart';
 import 'screens/favorites_screen.dart';
 import 'screens/sad_captions_screen.dart';
 import 'models/favorites_model.dart';
@@ -31,9 +32,10 @@ class SigmaCaptionApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) =>  HomeScreen(),
-        '/captions': (context) => CaptionsScreen(),
+        '/captions': (context) => sigma(),
         '/favorites': (context) => FavoritesScreen(),
-        '/sad_captions': (context) => SadCaptionsScreen(), // New Route
+        '/sad_captions': (context) => SadCaptionsScreen(), 
+        '/funny_captions': (context) => funnyCaptionsScreen(), 
       },
     );
   }
