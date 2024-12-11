@@ -110,7 +110,7 @@ class HomeScreen extends StatelessWidget {
                   context,
                   color: Colors.redAccent,
                   icon: Icons.heart_broken_outlined, // Updated for compatibility
-                  label: "Love Failure Captions",
+                  label: "Brackup Captions",
                   routeName: '/love_failure_captions',
                 ),
 
@@ -141,7 +141,7 @@ class HomeScreen extends StatelessWidget {
         ),
         color: color,
         child: SizedBox(
-          width: 150, // Fixed width
+          width: 160, // Fixed width
           height: 150, // Fixed height
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

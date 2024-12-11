@@ -20,6 +20,7 @@ class Favorites extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Center(child: Text('Favorite Captions')),
+        backgroundColor: const Color.fromARGB(255, 53, 164, 184), // Custom color for AppBar
       ),
       body: Consumer<FavoritesModel>(
         builder: (context, favoritesModel, child) {
@@ -36,29 +37,30 @@ class Favorites extends StatelessWidget {
             itemBuilder: (context, index) {
               String caption = favoritesModel.favorites[index];
               return Card(
-                margin: EdgeInsets.all(12),
+                margin: const EdgeInsets.all(12),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15),
                 ),
                 elevation: 6,
+                color: Colors.teal.shade100, // Custom color for Card
                 child: ListTile(
                   title: Text(
                     caption,
-                    style: TextStyle(fontSize: 18),
+                    style: const TextStyle(fontSize: 18, color: Colors.black), // Text color
                   ),
                   trailing: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      // Copy Button
+                      // Copy Button with custom color
                       IconButton(
-                        icon: Icon(Icons.copy, color: Colors.blue),
+                        icon: const Icon(Icons.copy, color: Colors.blue), // Copy icon color
                         onPressed: () {
                           copyToClipboard(context, caption);
                         },
                       ),
-                      // Delete Button
+                      // Delete Button with custom color
                       IconButton(
-                        icon: Icon(Icons.delete, color: Colors.red),
+                        icon: const Icon(Icons.delete, color: Colors.red), // Delete icon color
                         onPressed: () {
                           favoritesModel.removeFavorite(caption);
                         },
