@@ -5,7 +5,9 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Sigma Caption App'),
+        title: const Center(
+          child: Text('Enjoy the status'),
+        ),
       ),
       body: SingleChildScrollView( // Makes the entire page scrollable
         child: Padding(
@@ -31,7 +33,7 @@ class HomeScreen extends StatelessWidget {
                         Icon(Icons.edit, color: Colors.white, size: 40),
                         SizedBox(height: 10),
                         Text(
-                          "Go to Captions",
+                          "Sigma Captions",
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -62,7 +64,7 @@ class HomeScreen extends StatelessWidget {
                         Icon(Icons.favorite, color: Colors.white, size: 40),
                         SizedBox(height: 10),
                         Text(
-                          "Go to Favorites",
+                          "Favorites",
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -93,7 +95,7 @@ class HomeScreen extends StatelessWidget {
                         Icon(Icons.sentiment_dissatisfied, color: Colors.white, size: 40),
                         SizedBox(height: 10),
                         Text(
-                          "Go to Sad Captions",
+                          "Sad Captions",
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
