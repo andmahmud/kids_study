@@ -5,7 +5,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sigma Caption App'),
+        title: const Text('Sigma Caption App'),
       ),
       body: SingleChildScrollView( // Makes the entire page scrollable
         child: Padding(
@@ -26,7 +26,7 @@ class HomeScreen extends StatelessWidget {
                   child: Container(
                     padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 16),
                     alignment: Alignment.center,
-                    child: Column(
+                    child: const Column(
                       children: [
                         Icon(Icons.edit, color: Colors.white, size: 40),
                         SizedBox(height: 10),
@@ -43,7 +43,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               GestureDetector(
                 onTap: () {
                   Navigator.pushNamed(context, '/favorites');
@@ -57,7 +57,7 @@ class HomeScreen extends StatelessWidget {
                   child: Container(
                     padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 16),
                     alignment: Alignment.center,
-                    child: Column(
+                    child: const Column(
                       children: [
                         Icon(Icons.favorite, color: Colors.white, size: 40),
                         SizedBox(height: 10),
@@ -74,7 +74,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               GestureDetector(
                 onTap: () {
                   Navigator.pushNamed(context, '/sad_captions');
@@ -88,7 +88,7 @@ class HomeScreen extends StatelessWidget {
                   child: Container(
                     padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 16),
                     alignment: Alignment.center,
-                    child: Column(
+                    child: const Column(
                       children: [
                         Icon(Icons.sentiment_dissatisfied, color: Colors.white, size: 40),
                         SizedBox(height: 10),
