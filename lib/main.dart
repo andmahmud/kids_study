@@ -1,4 +1,4 @@
-import 'package:caption/Motivation.dart';
+import 'package:caption/screens/Motivation.dart';
 import 'package:caption/screens/Birthday.dart';
 import 'package:caption/screens/Friendship.dart';
 import 'package:caption/screens/Life.dart';
@@ -41,7 +41,7 @@ class SigmaCaptionApp extends StatelessWidget {
         '/captions': (context) => sigma(),
         '/favorites': (context) => Favorites(),
         '/sad_captions': (context) => Sad(), 
-        '/funny_captions': (context) => funny(), 
+        '/funny_captions': (context) => Funny(), 
         '/motivational_captions':(context)=>Motivation(),
         '/life_captions':(context)=>Life(),
         '/romantic_captions':(context)=>Romantic(),
