@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
-
-class funny extends StatelessWidget {
-  const funny({super.key});
+class Romantic extends StatelessWidget {
+  const Romantic({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  Scaffold(
       body: Text("data"),
     );
   }

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
-
-class funny extends StatelessWidget {
-  const funny({super.key});
+class Birthday extends StatelessWidget {
+  const Birthday({super.key});
 
   @override
   Widget build(BuildContext context) {

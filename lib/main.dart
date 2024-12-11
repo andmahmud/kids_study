@@ -1,3 +1,9 @@
+import 'package:caption/Motivation.dart';
+import 'package:caption/screens/Birthday.dart';
+import 'package:caption/screens/Friendship.dart';
+import 'package:caption/screens/Life.dart';
+import 'package:caption/screens/RomLove_Failureantic.dart';
+import 'package:caption/screens/Romantic.dart';
 import 'package:caption/screens/funny.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -36,6 +42,12 @@ class SigmaCaptionApp extends StatelessWidget {
         '/favorites': (context) => Favorites(),
         '/sad_captions': (context) => Sad(), 
         '/funny_captions': (context) => funny(), 
+        '/motivational_captions':(context)=>Motivation(),
+        '/life_captions':(context)=>Life(),
+        '/romantic_captions':(context)=>Romantic(),
+       '/friendship_captions':(context)=>Friendship(),
+        '/birthday_captions':(context)=>Birthday(),
+        '/love_failure_captions':(context)=>RomLove_Failureantic(),
       },
     );
   }
