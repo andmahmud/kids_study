@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import '../models/favorites_model.dart';
 
-class SadCaptionsScreen extends StatelessWidget {
+class Sad extends StatelessWidget {
   final List<String> sadCaptions = [
     "Tears speak the words that the heart can't say.",
     "It's hard to forget someone who gave you so much to remember.",
