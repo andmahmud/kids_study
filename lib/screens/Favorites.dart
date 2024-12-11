@@ -1,8 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter/services.dart'; // For Clipboard functionality
 import '../models/favorites_model.dart';
 
 class Favorites extends StatelessWidget {
+  // Function to copy the caption to clipboard
+  void copyToClipboard(BuildContext context, String caption) {
+    Clipboard.setData(ClipboardData(text: caption));
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content: Text('Copied to clipboard!'),
+        duration: Duration(seconds: 2),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,11 +46,24 @@ class Favorites extends StatelessWidget {
                     caption,
                     style: TextStyle(fontSize: 18),
                   ),
-                  trailing: IconButton(
-                    icon: Icon(Icons.delete, color: Colors.red),
-                    onPressed: () {
-                      favoritesModel.removeFavorite(caption);
-                    },
+                  trailing: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      // Copy Button
+                      IconButton(
+                        icon: Icon(Icons.copy, color: Colors.blue),
+                        onPressed: () {
+                          copyToClipboard(context, caption);
+                        },
+                      ),
+                      // Delete Button
+                      IconButton(
+                        icon: Icon(Icons.delete, color: Colors.red),
+                        onPressed: () {
+                          favoritesModel.removeFavorite(caption);
+                        },
+                      ),
+                    ],
                   ),
                 ),
               );
