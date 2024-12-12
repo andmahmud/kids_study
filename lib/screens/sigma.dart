@@ -15,7 +15,7 @@ class sigma extends StatelessWidget {
     "Your vibe attracts your tribe.",
     "Hustle until your haters ask if you're hiring.",
     "Dream big, stay humble.",
-     "Stay strong, even when you feel weak.",
+    "Stay strong, even when you feel weak.",
     "The world is yours to conquer.",
     "Your vibe attracts your tribe.",
     "Hustle until your haters ask if you're hiring.",
@@ -29,20 +29,15 @@ class sigma extends StatelessWidget {
 
   void copyToClipboard(BuildContext context, String text) {
     Clipboard.setData(ClipboardData(text: text));
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Copied to clipboard '),
-        duration: Duration(seconds: 2),
-      ),
-    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sigma Captions'),
-        backgroundColor: Colors.deepPurple, // Custom AppBar color
+        title: const Center(child: Text('Sigma Captions')),
+        backgroundColor:
+            const Color.fromARGB(255, 27, 128, 228), // Custom AppBar color
       ),
       body: Consumer<FavoritesModel>(
         builder: (context, favoritesModel, child) {
@@ -53,7 +48,7 @@ class sigma extends StatelessWidget {
               bool isFavorite = favoritesModel.favorites.contains(caption);
 
               return Card(
-                margin: EdgeInsets.all(12),
+                margin: const EdgeInsets.all(12),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15),
                 ),
@@ -66,15 +61,22 @@ class sigma extends StatelessWidget {
                     children: [
                       Text(
                         caption,
-                        style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                        style: const TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.w500),
                       ),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           // Copy Button
                           IconButton(
-                            icon: Icon(Icons.copy, color: Colors.blue),
+                            icon: const Icon(Icons.copy, color: Colors.blue),
+                            onPressed: () {
+                              copyToClipboard(context, caption);
+                            },
+                          ), // share Button
+                          IconButton(
+                            icon: const Icon(Icons.share, color: Colors.blue),
                             onPressed: () {
                               copyToClipboard(context, caption);
                             },
@@ -82,8 +84,10 @@ class sigma extends StatelessWidget {
                           // Favorite Icon
                           IconButton(
                             icon: Icon(
-                              isFavorite ? Icons.favorite : Icons.favorite_border,
-                              color: isFavorite ? Colors.red : Colors.grey,
+                              isFavorite
+                                  ? Icons.favorite
+                                  : Icons.favorite_border,
+                              color: isFavorite ? Colors.red : Colors.black,
                             ),
                             onPressed: () {
                               if (isFavorite) {

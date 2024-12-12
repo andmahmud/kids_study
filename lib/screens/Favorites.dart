@@ -4,6 +4,8 @@ import 'package:flutter/services.dart'; // For Clipboard functionality
 import '../models/favorites_model.dart';
 
 class Favorites extends StatelessWidget {
+  const Favorites({super.key});
+
   // Function to copy the caption to clipboard
   void copyToClipboard(BuildContext context, String caption) {
     Clipboard.setData(ClipboardData(text: caption));
