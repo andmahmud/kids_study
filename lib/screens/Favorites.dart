@@ -7,12 +7,6 @@ class Favorites extends StatelessWidget {
   // Function to copy the caption to clipboard
   void copyToClipboard(BuildContext context, String caption) {
     Clipboard.setData(ClipboardData(text: caption));
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Copied to clipboard!'),
-        duration: Duration(seconds: 2),
-      ),
-    );
   }
 
   @override
@@ -20,7 +14,8 @@ class Favorites extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Center(child: Text('Favorite Captions')),
-        backgroundColor: const Color.fromARGB(255, 53, 164, 184), // Custom color for AppBar
+        backgroundColor:
+            const Color.fromARGB(255, 53, 164, 184), // Custom color for AppBar
       ),
       body: Consumer<FavoritesModel>(
         builder: (context, favoritesModel, child) {
@@ -43,27 +38,53 @@ class Favorites extends StatelessWidget {
                 ),
                 elevation: 6,
                 color: Colors.teal.shade100, // Custom color for Card
-                child: ListTile(
-                  title: Text(
-                    caption,
-                    style: const TextStyle(fontSize: 18, color: Colors.black), // Text color
-                  ),
-                  trailing: Row(
-                    mainAxisSize: MainAxisSize.min,
+                child: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      // Copy Button with custom color
-                      IconButton(
-                        icon: const Icon(Icons.copy, color: Colors.blue), // Copy icon color
-                        onPressed: () {
-                          copyToClipboard(context, caption);
-                        },
+                      // Caption text
+                      Text(
+                        caption,
+                        style: const TextStyle(
+                          fontSize: 18,
+                          color: Colors.black,
+                        ),
                       ),
-                      // Delete Button with custom color
-                      IconButton(
-                        icon: const Icon(Icons.delete, color: Colors.red), // Delete icon color
-                        onPressed: () {
-                          favoritesModel.removeFavorite(caption);
-                        },
+                      const SizedBox(
+                          height: 8.0), // Space between text and icons
+                      // Row for icons
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          // Copy Button
+                          IconButton(
+                            icon: const Icon(
+                              Icons.copy,
+                              color: Colors.blue,
+                            ),
+                            onPressed: () {
+                              copyToClipboard(context, caption);
+                            },
+                          ),
+                          IconButton(
+                            icon: const Icon(
+                              Icons.share,
+                              color: Colors.blue,
+                            ),
+                            onPressed: () {},
+                          ),
+                          // Delete Button
+                          IconButton(
+                            icon: const Icon(
+                              Icons.delete,
+                              color: Colors.red,
+                            ),
+                            onPressed: () {
+                              favoritesModel.removeFavorite(caption);
+                            },
+                          ),
+                        ],
                       ),
                     ],
                   ),

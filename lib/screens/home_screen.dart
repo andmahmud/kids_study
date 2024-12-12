@@ -35,7 +35,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -55,7 +55,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -75,7 +75,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -95,7 +95,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -106,17 +106,16 @@ class HomeScreen extends StatelessWidget {
                     label: "Birthday Captions",
                     routeName: '/birthday_captions',
                   ),
-                 buildCard(
-                  context,
-                  color: Colors.redAccent,
-                  icon: Icons.heart_broken_outlined, // Updated for compatibility
-                  label: "Brackup Captions",
-                  routeName: '/love_failure_captions',
-                ),
-
+                  buildCard(
+                    context,
+                    color: Colors.redAccent,
+                    icon: Icons
+                        .heart_broken_outlined, // Updated for compatibility
+                    label: "Brackup Captions",
+                    routeName: '/love_failure_captions',
+                  ),
                 ],
               ),
-
             ],
           ),
         ),
@@ -141,7 +140,7 @@ class HomeScreen extends StatelessWidget {
         ),
         color: color,
         child: SizedBox(
-          width: 160, // Fixed width
+          width: 155, // Fixed width
           height: 150, // Fixed height
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
