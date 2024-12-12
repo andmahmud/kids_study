@@ -17,7 +17,7 @@ void main() {
   runApp(
     ChangeNotifierProvider(
       create: (context) => FavoritesModel(),
-      child: CaptionApp(),
+      child: const CaptionApp(),
     ),
   );
 }
@@ -29,7 +29,7 @@ class CaptionApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Sigma Captions',
+      title: 'Captions',
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
         scaffoldBackgroundColor: Colors.grey.shade100,
