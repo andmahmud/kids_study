@@ -61,13 +61,13 @@ class Motivation extends StatelessWidget {
                         children: [
                           // Copy Button
                           IconButton(
-                            icon: const Icon(Icons.copy, color: Colors.blue),
+                            icon: const Icon(Icons.copy, color: Colors.black),
                             onPressed: () {
                               copyToClipboard(context, caption);
                             },
                           ), // share Button
                           IconButton(
-                            icon: const Icon(Icons.share, color: Colors.blue),
+                            icon: const Icon(Icons.share, color: Colors.black),
                             onPressed: () {
                               copyToClipboard(context, caption);
                             },

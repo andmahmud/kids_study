@@ -64,7 +64,7 @@ class Favorites extends StatelessWidget {
                           IconButton(
                             icon: const Icon(
                               Icons.copy,
-                              color: Colors.blue,
+                              color: Colors.black,
                             ),
                             onPressed: () {
                               copyToClipboard(context, caption);
@@ -73,7 +73,7 @@ class Favorites extends StatelessWidget {
                           IconButton(
                             icon: const Icon(
                               Icons.share,
-                              color: Colors.blue,
+                              color: Colors.black,
                             ),
                             onPressed: () {},
                           ),
@@ -81,7 +81,7 @@ class Favorites extends StatelessWidget {
                           IconButton(
                             icon: const Icon(
                               Icons.delete,
-                              color: Colors.red,
+                              color: Colors.black,
                             ),
                             onPressed: () {
                               favoritesModel.removeFavorite(caption);

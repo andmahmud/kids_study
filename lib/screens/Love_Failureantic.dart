@@ -108,7 +108,14 @@ class Love_Failureantic extends StatelessWidget {
                         children: [
                           // Copy Button
                           IconButton(
-                            icon: const Icon(Icons.copy, color: Colors.blue),
+                            icon: const Icon(Icons.copy, color: Colors.black),
+                            onPressed: () {
+                              copyToClipboard(context, caption);
+                            },
+                          ),
+                            // share Button
+                          IconButton(
+                            icon: const Icon(Icons.share, color: Colors.black),
                             onPressed: () {
                               copyToClipboard(context, caption);
                             },
@@ -117,7 +124,7 @@ class Love_Failureantic extends StatelessWidget {
                           IconButton(
                             icon: Icon(
                               isFavorite ? Icons.favorite : Icons.favorite_border,
-                              color: isFavorite ? Colors.red : Colors.grey,
+                              color: isFavorite ? Colors.red : Colors.black,
                             ),
                             onPressed: () {
                               if (isFavorite) {
