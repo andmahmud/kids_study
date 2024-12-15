@@ -17,15 +17,14 @@ void main() {
   runApp(
     ChangeNotifierProvider(
       create: (context) => FavoritesModel(),
-      child: SigmaCaptionApp(),
+      child: const CaptionApp(),
     ),
   );
 }
 
+class CaptionApp extends StatelessWidget {
+  const CaptionApp({super.key});
 
-
-
-class SigmaCaptionApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -37,17 +36,17 @@ class SigmaCaptionApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) =>  HomeScreen(),
+        '/': (context) => HomeScreen(),
         '/captions': (context) => sigma(),
         '/favorites': (context) => Favorites(),
-        '/sad_captions': (context) => Sad(), 
-        '/funny_captions': (context) => Funny(), 
-        '/motivational_captions':(context)=>Motivation(),
-        '/life_captions':(context)=>Life(),
-        '/romantic_captions':(context)=>Romantic(),
-       '/friendship_captions':(context)=>Friendship(),
-        '/birthday_captions':(context)=>Birthday(),
-        '/love_failure_captions':(context)=>Love_Failureantic(),
+        '/sad_captions': (context) => Sad(),
+        '/funny_captions': (context) => Funny(),
+        '/motivational_captions': (context) => Motivation(),
+        '/life_captions': (context) => Life(),
+        '/romantic_captions': (context) => Romantic(),
+        '/friendship_captions': (context) => Friendship(),
+        '/birthday_captions': (context) => Birthday(),
+        '/love_failure_captions': (context) => Love_Failureantic(),
       },
     );
   }
