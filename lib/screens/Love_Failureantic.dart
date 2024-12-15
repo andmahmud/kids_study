@@ -78,8 +78,9 @@ class Love_Failureantic extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Love Failure Captions'),
-        backgroundColor: Colors.deepPurple, // Custom AppBar color
+        title: const Center(child: Text('Breakup Captions')),
+        backgroundColor: Colors.teal, // Custom AppBar color
+        foregroundColor: Colors.white,
       ),
       body: Consumer<FavoritesModel>(
         builder: (context, favoritesModel, child) {
@@ -90,7 +91,7 @@ class Love_Failureantic extends StatelessWidget {
               bool isFavorite = favoritesModel.favorites.contains(caption);
 
               return Card(
-                margin: EdgeInsets.all(12),
+                margin: const EdgeInsets.all(12),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15),
                 ),
@@ -103,15 +104,15 @@ class Love_Failureantic extends StatelessWidget {
                     children: [
                       Text(
                         caption,
-                        style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                        style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                       ),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           // Copy Button
                           IconButton(
-                            icon: Icon(Icons.copy, color: Colors.blue),
+                            icon: const Icon(Icons.copy, color: Colors.blue),
                             onPressed: () {
                               copyToClipboard(context, caption);
                             },

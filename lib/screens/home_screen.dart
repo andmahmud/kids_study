@@ -111,7 +111,7 @@ class HomeScreen extends StatelessWidget {
                     color: Colors.redAccent,
                     icon: Icons
                         .heart_broken_outlined, // Updated for compatibility
-                    label: "Brackup Captions",
+                    label: "Breakup Captions",
                     routeName: '/love_failure_captions',
                   ),
                 ],
