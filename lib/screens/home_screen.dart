@@ -141,7 +141,7 @@ class HomeScreen extends StatelessWidget {
         ),
         color: color,
         child: SizedBox(
-          width: 160, // Fixed width
+          width: 150, // Fixed width
           height: 150, // Fixed height
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
