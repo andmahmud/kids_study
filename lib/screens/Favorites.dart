@@ -18,13 +18,14 @@ class Favorites extends StatelessWidget {
         title: const Center(child: Text('Favorite Captions')),
         backgroundColor:
             const Color.fromARGB(255, 53, 164, 184), // Custom color for AppBar
+            automaticallyImplyLeading: false,
       ),
       body: Consumer<FavoritesModel>(
         builder: (context, favoritesModel, child) {
           if (favoritesModel.favorites.isEmpty) {
             return const Center(
               child: Text(
-                'No favorites yet!',
+                'No Favorites yet!',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
             );

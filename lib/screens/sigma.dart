@@ -38,6 +38,7 @@ class sigma extends StatelessWidget {
         title: const Center(child: Text('Sigma Captions')),
         backgroundColor:
             const Color.fromARGB(255, 27, 128, 228), // Custom AppBar color
+            automaticallyImplyLeading: false,
       ),
       body: Consumer<FavoritesModel>(
         builder: (context, favoritesModel, child) {
@@ -70,13 +71,13 @@ class sigma extends StatelessWidget {
                         children: [
                           // Copy Button
                           IconButton(
-                            icon: const Icon(Icons.copy, color: Colors.blue),
+                            icon: const Icon(Icons.copy, color: Colors.black),
                             onPressed: () {
                               copyToClipboard(context, caption);
                             },
                           ), // share Button
                           IconButton(
-                            icon: const Icon(Icons.share, color: Colors.blue),
+                            icon: const Icon(Icons.share, color: Colors.black),
                             onPressed: () {
                               copyToClipboard(context, caption);
                             },

@@ -121,8 +121,9 @@ class Birthday extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Birthday Captions'),
+        title: const Center(child: Text('Birthday Captions')),
         backgroundColor: Colors.pink, // Color to reflect the birthday theme
+        automaticallyImplyLeading: false,
       ),
       body: Consumer<FavoritesModel>(
         builder: (context, favoritesModel, child) {

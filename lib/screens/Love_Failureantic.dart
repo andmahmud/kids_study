@@ -66,12 +66,7 @@ class Love_Failureantic extends StatelessWidget {
 
   void copyToClipboard(BuildContext context, String text) {
     Clipboard.setData(ClipboardData(text: text));
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Copied to clipboard'),
-        duration: Duration(seconds: 2),
-      ),
-    );
+  
   }
 
   @override
@@ -81,6 +76,7 @@ class Love_Failureantic extends StatelessWidget {
         title: const Center(child: Text('Breakup Captions')),
         backgroundColor: Colors.teal, // Custom AppBar color
         foregroundColor: Colors.white,
+        automaticallyImplyLeading: false,
       ),
       body: Consumer<FavoritesModel>(
         builder: (context, favoritesModel, child) {

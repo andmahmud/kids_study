@@ -19,20 +19,16 @@ class Friendship extends StatelessWidget {
 
   void copyToClipboard(BuildContext context, String text) {
     Clipboard.setData(ClipboardData(text: text));
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Copied to clipboard'),
-        duration: Duration(seconds: 2),
-      ),
-    );
+   
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Friendship Captions'),
+        title: const Center(child: Text('Friendship Captions')),
         backgroundColor: Colors.orange, // Warm and inviting color for friendship
+        automaticallyImplyLeading: false,
       ),
       body: Consumer<FavoritesModel>(
         builder: (context, favoritesModel, child) {
@@ -43,7 +39,7 @@ class Friendship extends StatelessWidget {
               bool isFavorite = favoritesModel.favorites.contains(caption);
 
               return Card(
-                margin: EdgeInsets.all(12),
+                margin: const EdgeInsets.all(12),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15),
                 ),
@@ -56,24 +52,31 @@ class Friendship extends StatelessWidget {
                     children: [
                       Text(
                         caption,
-                        style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                        style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                       ),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           // Copy Button
                           IconButton(
-                            icon: Icon(Icons.copy, color: Colors.blue),
+                            icon: const Icon(Icons.copy, color: Colors.black),
                             onPressed: () {
                               copyToClipboard(context, caption);
+                            },
+                          ),
+                             // Share Button
+                          IconButton(
+                            icon: const Icon(Icons.share, color: Colors.black),
+                            onPressed: () {
+                              
                             },
                           ),
                           // Favorite Icon
                           IconButton(
                             icon: Icon(
                               isFavorite ? Icons.favorite : Icons.favorite_border,
-                              color: isFavorite ? Colors.red : Colors.grey,
+                              color: isFavorite ? Colors.red : Colors.black,
                             ),
                             onPressed: () {
                               if (isFavorite) {

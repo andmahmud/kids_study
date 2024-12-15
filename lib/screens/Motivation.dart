@@ -25,8 +25,9 @@ class Motivation extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Motivational Captions'),
+        title: const Center(child: Text('Motivational Captions')),
         backgroundColor: Colors.green, // Motivational and fresh color
+        automaticallyImplyLeading: false,
       ),
       body: Consumer<FavoritesModel>(
         builder: (context, favoritesModel, child) {

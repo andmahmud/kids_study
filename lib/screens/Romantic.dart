@@ -25,8 +25,10 @@ class Romantic extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Romantic Captions'),
+        title: const Center(child: Text('Romantic Captions')),
         backgroundColor: Colors.pink, // Romantic and warm color
+        foregroundColor: Colors.white,
+        automaticallyImplyLeading: false,
       ),
       body: Consumer<FavoritesModel>(
         builder: (context, favoritesModel, child) {

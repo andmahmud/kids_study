@@ -10,6 +10,7 @@ class HomeScreen extends StatelessWidget {
         title: const Center(child: Text("Enjoy the Status")),
         backgroundColor: Colors.teal,
         foregroundColor: Colors.white,
+        
       ),
       body: SingleChildScrollView(
         child: Padding(
