@@ -39,7 +39,7 @@ class Favorites extends StatelessWidget {
                   borderRadius: BorderRadius.circular(15),
                 ),
                 elevation: 6,
-                color: Colors.teal.shade100, // Custom color for Card
+                color: Colors.teal, // Custom color for Card
                 child: Padding(
                   padding: const EdgeInsets.all(12.0),
                   child: Column(
