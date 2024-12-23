@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:kids_study/page/ArabiHorof.dart';
-import 'package:kids_study/page/BanglaBanjonborno.dart';
-import 'package:kids_study/page/BanglaSongkha.dart';
-import 'package:kids_study/page/BanglaSwarborno.dart';
-import 'package:kids_study/page/BengaliMonthname.dart';
-import 'package:kids_study/page/BengaliSeasons.dart';
-import 'package:kids_study/page/EnglishLetters.dart';
-import 'package:kids_study/page/EnglishMonthname.dart';
-import 'package:kids_study/page/EnglishNumbers.dart';
-import 'package:kids_study/page/EnglishSeasons.dart';
-import 'package:kids_study/page/banglaweekname.dart';
-import 'package:kids_study/page/englishweekname.dart';
+import 'package:kids_study/screens/ArabiHorof.dart';
+import 'package:kids_study/screens/BanglaBanjonborno.dart';
+import 'package:kids_study/screens/BanglaSongkha.dart';
+import 'package:kids_study/screens/BanglaSwarborno.dart';
+import 'package:kids_study/screens/BengaliMonthname.dart';
+import 'package:kids_study/screens/BengaliSeasons.dart';
+import 'package:kids_study/screens/EnglishLetters.dart';
+import 'package:kids_study/screens/EnglishMonthname.dart';
+import 'package:kids_study/screens/EnglishNumbers.dart';
+import 'package:kids_study/screens/EnglishSeasons.dart';
+import 'package:kids_study/screens/banglaweekname.dart';
+import 'package:kids_study/screens/englishweekname.dart';
 
 class HomePage extends StatelessWidget {
   final List<Map<String, dynamic>> items = [
