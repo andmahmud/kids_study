@@ -83,7 +83,7 @@ class ItemCard extends StatelessWidget {
   final String title;
   final String image;
 
-  const ItemCard({required this.title, required this.image});
+  const ItemCard({super.key, required this.title, required this.image});
 
   @override
   Widget build(BuildContext context) {
