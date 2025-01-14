@@ -14,7 +14,7 @@ import 'package:kids_study/screens/englishweekname.dart';
 
 class HomePage extends StatelessWidget {
   final List<Map<String, dynamic>> items = [
-    {"title": "আরবি হরফ", "image": "assets/images/cat_icon.png", "page": ArabicLettersPage()},
+    {"title": "আরবি হরফ", "image": "assets/images/ArabicLetters.png", "page": ArabicLettersPage()},
     {"title": "বাংলা স্বরবর্ণ", "image": "assets/images/cat_icon.png", "page": BanglaSwarbornoPage()},
     {"title": "বাংলা ব্যঞ্জনবর্ণ", "image": "assets/images/cat_icon.png", "page": BanglaBanjanborno()},
     {"title": "বাংলা সংখ্যা", "image": "assets/images/cat_icon.png", "page": BanglaNumbersPage()},
