@@ -42,7 +42,7 @@ class HomePage extends StatelessWidget {
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Image.asset('assets/images/cat_icon.png'), // Top-right icon
+            child: Image.asset('assets/images/cat_icon.png'), 
           ),
         ],
       ),
@@ -50,7 +50,7 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2, // Two items per row
+            crossAxisCount: 2, 
             crossAxisSpacing: 10,
             mainAxisSpacing: 10,
             childAspectRatio: 0.9,
@@ -114,7 +114,6 @@ class ItemCard extends StatelessWidget {
   }
 }
 
-// Individual Pages
 
 
 
